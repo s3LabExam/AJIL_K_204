@@ -4,7 +4,7 @@ public class product
   int pcode;
   String pname;
   int price;
-private Scanner r;
+  private Scanner r;
   public void get()
   {
 	  r = new Scanner(System.in);
