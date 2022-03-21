@@ -4,24 +4,58 @@ public class product
   int pcode;
   String pname;
   int price;
+private Scanner r;
   public void get()
   {
+	  r = new Scanner(System.in);
 	  System.out.print("Enter the Product id: ");
-	  Scanner read1= new Scanner(System.in);
-	  this.pcode= read1.nextInt();
+	  this.pcode= r.nextInt();
 	  System.out.print("Enter the Product name: ");
-	  Scanner read2= new Scanner(System.in);
-	  this.pname= read2.nextLine();
+	  this.pname= r.next();
 	  System.out.print("Enter the Product Price: ");
-	  Scanner read3= new Scanner(System.in);
-	  this.price= read3.nextInt();
+	  this.price= r.nextInt();
   }
   public static void main(String[] args)
   {
-    product item = new product();
-    item.get();
-    System.out.println("Product Code: "+item.pcode);
-    System.out.println("Product Name: "+item.pname );
-    System.out.println("Price: "+item.price);
+    product item1 = new product();
+    item1.get();
+    System.out.println("Product Code: "+item1.pcode);
+    System.out.println("Product Name: "+item1.pname );
+    System.out.println("Price: "+item1.price);
+    System.out.println("\n");
+    product item2 = new product();
+    item2.get();
+    System.out.println("Product Code: "+item2.pcode);
+    System.out.println("Product Name: "+item2.pname );
+    System.out.println("Price: "+item2.price);
+    System.out.println("\n");
+    product item3 = new product();
+    item3.get();
+    System.out.println("Product Code: "+item3.pcode);
+    System.out.println("Product Name: "+item3.pname );
+    System.out.println("Price: "+item3.price);
+    System.out.println("\n");
+    if(item1.price<item2.price)
+    {
+    	if(item1.price<item3.price)
+    	{
+    		System.out.println(item1.pname+" is less expensive");
+    	}
+    	else
+    	{
+    		System.out.println(item3.pname+" is less expensive");
+    	}
+    }
+    else
+    {
+    	if(item2.price<item3.price)
+    	{
+    		System.out.println(item2.pname+" is less expensive");
+    	}
+    	else
+    	{
+    		System.out.println(item3.pname+" is less expensive");
+    	}
+    }
   }
 }
