@@ -1,13 +1,14 @@
 import java.util.*;
 public class matrix {
 
+	private static Scanner read;
+
 	public static void main(String[] args)
 	{
 		int[][] a=new int[10][10];
 		int[][] b=new int[10][10];
-		int[][] res=new int[10][10];
 		int i,j;
-		Scanner read=new Scanner(System.in);
+		read = new Scanner(System.in);
 		System.out.println("Enter the number of rows:");
 		int r = read.nextInt();
 		System.out.println("Enter the number of columns:");
