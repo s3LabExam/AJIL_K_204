@@ -11,7 +11,6 @@ public class complexNo
 		read.nextLine();
 		System.out.println("Enter the imaginary part of the Complex Number");
 		this.i1=read.nextLine();
-		n=n+1;
 	}
 	public void printData()
 	{
