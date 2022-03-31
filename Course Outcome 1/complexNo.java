@@ -1,30 +1,21 @@
 import java.util.Scanner;
 public class complexNo
 {
-	int r1,r2;
-	String i1,i2;
-	public void getData()
-	{
-		Scanner read = new Scanner(System.in);
-		System.out.println("Enter the real part of the Complex Number");
-		this.r1=read.nextInt();
-		read.nextLine();
-		System.out.println("Enter the imaginary part of the Complex Number");
-		this.i1=read.nextLine();
-		n=n+1;
-	}
-	public void printData()
-	{
-		System.out.println("The Complex Number:"+this.r1+"+"+this.i1);
-	}
+	private static Scanner read;
+
 	public static void main(String[] args)
 	{
-		complexNo c1= new complexNo();
-		c1.getData();
-		c1.printData();
-		complexNo c2= new complexNo();
-		c2.getData();
-		c2.printData();
+		read = new Scanner(System.in);
+		System.out.println("Enter the 1st Complex Number");
+		String c1=read.nextLine();
+		String[] n1=c1.split("\\+");
+		int r1 = Integer.parseInt(n1[0]);
+		int i1=Integer.parseInt(n1[1].substring(0,(n1[1].length()-1)));
+		System.out.println("Enter the 2nd Complex Number");
+		String c2=read.nextLine();
+		String[] n2=c2.split("\\+");
+		int r2 = Integer.parseInt(n2[0]);
+		int i2=Integer.parseInt(n2[1].substring(0,(n2[1].length()-1)));
+		System.out.println("Sum of the two Complex Numbers is "+(r1+r2)+"+"+(i1+i2)+"i.");
 	}
-
 }
