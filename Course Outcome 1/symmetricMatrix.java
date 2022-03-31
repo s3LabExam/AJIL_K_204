@@ -6,7 +6,6 @@ public class symmetricMatrix
 	{
 		read = new Scanner(System.in);
 		int[][] a= new int [10][10];
-		int[][] b= new int [10][10];
 		int r,c,i,j;
 		System.out.println("Enter the number of rows:");
 		r= read.nextInt();
