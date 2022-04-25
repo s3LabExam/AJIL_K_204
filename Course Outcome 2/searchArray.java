@@ -4,28 +4,28 @@ public class searchArray
 {
 	public static void main(String [] args)
 	{
-		int a=new int[10];
-		int b=0,k=0;
-		Scanner s=new Scanner(System.in);
+		int a[]=new int[10];
+		int flag=0,n,i,key;
+		Scanner r=new Scanner(System.in);
 		System.out.println("Enter number of elements");
-		k=s.nextInt();
+		n=r.nextInt();
 		System.out.println("Enter the elements");
-		for (int i=0;i<k;i++)
+		for (i=0;i<n;i++)
 		{
-			a[i]=s.nextInt();
+			a[i]=r.nextInt();
 		}
 		System.out.println("Enter the number to search");
-		int x=s.nextInt();
-		for (int i=0;i<k;i++)
+		key=r.nextInt();
+		for (i=0;i<n;i++)
 		{
-			if(a[i]==x)
+			if(a[i]==key)
 			{
 				System.out.println("Number found");
-				b=1;
+				flag=1;
 				break;
 			}	
 		}
-		if(b==0)
+		if(flag==0)
 		{
 			System.out.println("Number not found");
 		}
