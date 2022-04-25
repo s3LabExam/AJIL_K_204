@@ -4,7 +4,7 @@ public class searchArray
 {
 	public static void main(String [] args)
 	{
-		int[] a=new int[10];
+		int a=new int[10];
 		int b=0,k=0;
 		Scanner s=new Scanner(System.in);
 		System.out.println("Enter number of elements");
