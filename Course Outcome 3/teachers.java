@@ -35,6 +35,20 @@ public class teachers extends employee
 		department=dept;
 		teacherId=tId;
 	}
+	void display()
+	{
+		System.out.println("Name: " + name);
+		System.out.println("Gender: " + gender);
+		System.out.println("Address: " + address);
+		System.out.println("Age: " + age);
+		System.out.println("Employee Id: "+ empId);
+		System.out.println("Company Name: " + company);
+		System.out.println("Qualification: " + qualification);
+		System.out.println("Salary: " + salary);
+		System.out.println("Subject: " + subject);
+		System.out.println("Department: " + department);
+		System.out.println("Teacher Id: " + teacherId);
+	}
 	public static void main(String[] args)
 	{
 		read = new Scanner(System.in);
@@ -67,7 +81,12 @@ public class teachers extends employee
 			String tdept = read.next();
 			System.out.println("Teacher Id");
 			int tId= read.nextInt();
-			obj[i]= new teachers(tname,tgen,tadd,tage,tempid,tcomp,tq,tsalary,tsub,tdept);
+			obj[i]= new teachers(tname,tgen,tadd,tage,tempid,tcomp,tq,tsalary,tsub,tdept,tId);
+		}
+		for(i=0;i<no;i++)
+		{
+			System.out.println("-----Details of Teachers-----");
+			obj[i].display();
 		}
 	}
 
