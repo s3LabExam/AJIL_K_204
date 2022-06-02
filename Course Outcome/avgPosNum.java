@@ -1,44 +1,42 @@
 package javaprgm;
 import java.util.Scanner;
-class  negativeException extends Exception
-{  
-    public  negativeException(int num)
-    {  
-        super(num);
-    }  
-}
-public class avgPosNum
+class NegativeNoException extends Exception
 {
-	static void checkNum (int num) throws  negativeException
-	{   
-	   if(num < 0)
-	   {   
-	       throw new negativeException(num+" is a negative number.");    
-	   }  
-	}    
+	public NegativeNoException(String str)
+	{
+		System.out.println(str);
+	}	
+}
+public class avgNum
+{
 	public static void main(String[] args)
 	{
 		Scanner read = new Scanner(System.in);
 		System.out.println("Enter the limit:\t");
-		int n,i,num,sum = 0;
+		int n,i,sum = 0;
 		n = read.nextInt();
 		for(i=0;i<n;i++)
 		{
-		   System.out.println("Enter the positive number:\t");
-		   num = read.nextInt();
-		   try
-		   {
-		     checkNum(num);
-		   }
-		   catch(negativeException ex)
-		   {
-		    		System.out.println("Caught the exception");  
-		            System.out.println("Exception occured: " + ex);  
-					i--;
-					num = read.nextInt();
-		    	 }
-		    	sum=sum+num;  
-		   }
-		  System.out.println("Average:"+(sum/n));
+			System.out.println("Enter the number");
+			String no = read.next();
+			int num = Integer.parseInt(no);
+			try
+			{
+				if(num < 0)
+				{
+					throw new NegativeNoException("Number is negative");
+				}
+				else
+				{
+					sum=sum+num;
+				}
+			}
+			catch (NegativeNoException m)
+			{
+				System.out.println(m);
+				i--;
+			}
+		}
+		System.out.println("SUM "+sum);
 	}
 }
