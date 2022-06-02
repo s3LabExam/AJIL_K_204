@@ -7,7 +7,7 @@ class NegativeNoException extends Exception
 		System.out.println(str);
 	}	
 }
-public class avgNum
+public class avgPosNum
 {
 	public static void main(String[] args)
 	{
