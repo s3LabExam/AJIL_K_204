@@ -1,11 +1,13 @@
-package internalExam;
-import java.util.*;
+
+import java.util.Scanner;
+
 interface shape
 {
 	double pi=3.14;
-	void triangle();
-	void circle();
+	void area();
+	void perimeter();
 }
+
 class triangle implements shape
 {
 	double at,pt;
@@ -30,39 +32,41 @@ class triangle implements shape
 }
 class circle implements shape
 {
+	Float r;
 	double ac,pc;
-	int radius;
 	circle()
-	{
-		Scanner read = new Scanner(System.in);
-		System.out.println("Enter the radius of the circle");
-		radius = read.nextInt();
+	{	Scanner sc=new Scanner(System.in);
+		System.out.println("enter radius");
+		r=sc.nextFloat();
 	}
 	public void area()
 	{
-		ac=(pi*radius*radius);
-		System.out.println("Area of Circle: "+ac);
+		ac=pi*r*r;
+		System.out.println("area is "+ac);
 	}
 	public void perimeter()
 	{
-		pc=(4*pi*radius);
-		System.out.println("Perimeter of Circle: "+pc);
+		pc=2*pi*r;
+		System.out.println("perimeter is "+pc);
+		
 	}
+	
 }
-public class areaPerimeter
-{
-	public static void main(String[] args)
+
+public class areaPerimeter {
+
+	public static void main(String args[])
 	{
-		interface s;
-		System.out.println("-----Triangle-----");
-		triangle t = new triangle();
-		s1=t;
-		t.area();
-		t.perimeter();
-		System.out.println("-----Circle-----");
-		circle c = new circle();
+		shape s;
+		System.out.println("Triangle");
+		triangle r=new triangle();
+		s=r;
+		s.area();
+		s.perimeter();
+		System.out.println("Circle");
+		circle c=new circle();
 		s=c;
-		c.area();
-		c.perimeter();
+		s.area();
+		s.perimeter();
 	}
 }
