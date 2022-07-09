@@ -15,7 +15,7 @@ class stack<T>
 	{
 		if (top + 1 == size)
 		{
-		     System.out.println("Stack Overflow");
+		    System.out.println("Stack Overflow");
 		}
 		else
 		{
@@ -52,13 +52,13 @@ class stack<T>
 	}
 	public String toString()
 	{
-		 String Ans = "";
-		 for (int i = 0; i < top; i++)
-		 {
-		     Ans += String.valueOf(A.get(i)) + "->";
-		 }
-		 Ans += String.valueOf(A.get(top));
-		 return Ans;
+		String Ans = "";
+		for (int i = 0; i < top; i++)
+		{
+			Ans += String.valueOf(A.get(i)) + "->";
+		}
+		Ans += String.valueOf(A.get(top));
+		return Ans;
 	}
 }
 public class genericStack
