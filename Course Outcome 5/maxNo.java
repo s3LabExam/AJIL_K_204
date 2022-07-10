@@ -29,7 +29,7 @@ public class maxNo implements ActionListener
         t3.setBounds(200, 150, 150, 30);
         f.add(t3);
 
-        l3 = new Label("Enter Second Number :");
+        l3 = new Label("Enter Third Number :");
         l3.setBounds(5, 150, 150, 30);
         f.add(l3);
         
