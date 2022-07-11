@@ -1,5 +1,4 @@
-package
-myproject;
+package myproject;
 import java.net.*;
 import java.io.*;
 public class server
